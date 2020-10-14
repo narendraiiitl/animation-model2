@@ -5,130 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="main.css" />
-    <style>
-      /* .animationcover img {
-        width: 100vw;
-        height: 100vh;
-      } */
-      /* .animationcover {
-        background: #0a1042;
-        padding-top: 2rem;
-      } */
-      .partone {
-        width: 40%;
-        /* border: 1px solid red; */
-        height: 100%;
-        display: flex;
-        padding-left: 2rem;
-        flex-direction: column;
-        justify-content: space-between;
-      }
-      .parttwo {
-        width: 55%;
-        /* border: 1px solid red; */
-        height: 100%;
-      }
-      .logo img {
-        width: 3rem;
-      }
-      .logo {
-        /* border: 1px solid red; */
-        padding-top: 1rem;
-      }
-      .name {
-        /* border: 1px solid red; */
-        padding-top: 2rem;
-      }
-      .name h1 {
-        font-size: 2.5rem;
-        font-family: "Montserrat";
-        color: white;
-        font-weight: 500;
-        margin: 0;
-      }
-      .partmid {
-        width: 5%;
-        /* border: 1px solid red; */
-        height: 100%;
-      }
-      .a {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-      }
-      .a1 {
-        width: 43%;
-        transform: translateY(-6px);
-        border-bottom: 1px solid white;
-      }
-      .a3 {
-        width: 43%;
-        transform: translateY(-6px);
-        border-bottom: 1px solid white;
-      }
-      .a2 {
-        color: white;
-        font-size: 1rem;
-        margin: 0 0.4rem;
-      }
-      .b {
-        color: white;
-        font-size: 2.1rem;
-      }
-      .c {
-        width: 97%;
-        border-bottom: 1px solid white;
-      }
-      .details {
-        margin-top: 0.5rem;
-        color: white;
-        font-family: "Montserrat";
-        font-weight: 300;
-        font-size: 0.9rem;
-      }
-      #explore {
-        border: none;
-        outline: none;
-        background-color: rgb(230, 168, 61);
-        font-size: 1.2rem;
-        font-weight: 500;
-        padding: 0.5rem 1rem;
-        cursor: pointer;
-        border-radius: 1px;
-      }
-      #exploreback {
-        border: none;
-        outline: none;
-        background-color: rgba(230, 168, 61, 0);
-        border: 1.5px solid white;
-        color: white;
-        font-size: 1.2rem;
-        font-weight: 400;
-        padding: 0.5rem 1rem;
-        border-radius: 1px;
-        margin-left: 2rem;
-        cursor: pointer;
-      }
-      .cta {
-        margin-top: 1rem;
-      }
-      .seperator {
-        margin-bottom: 6rem;
-      }
-    </style>
   </head>
   <body>
+    <div class="wrapperouter"></div>
     <div class="wrapper">
       <div class="hero">
         <div class="container" data-tilt>
           <svg viewBox="0 0 1920 1080">
-            <defs>
-              <pattern id="img1" patternUnits="userSpaceOnUse" width="1920" height="1080">
-                <image href="Repeating-Triangles.svg" x="0" y="0" width="1920" height="1080" />
-              </pattern>
-            </defs>
             <polygon
-              class="polymorph" 
+              class="polymorph"
               points="0 0 960 0 1920 0 1920 1080 1001 1080 0 1080 0 0"
             />
           </svg>
@@ -166,13 +51,12 @@
         </div>
       </div>
     </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.0.3/tilt.jquery.min.js"></script>
     <script src="anime.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tweenjs/1.0.2/tweenjs.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/timelinejs/3.6.6/js/timeline-min.js">
-    </script>
-    <srcipt src="app.js"></srcipt>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timelinejs/3.6.6/js/timeline-min.js"></script>
     <script>
       const btn = document.getElementById("explore");
       const btn2 = document.getElementById("exploreback");
@@ -224,6 +108,35 @@
           });
         }
       });
+
+      const container = document.querySelector(".container");
+      const tl = new TimelineMax();
+      const wrapper = document.querySelector(".wrapperouter");
+      tl.fromTo(
+        container,
+        1,
+        { height: "0vw" },
+        { height: "45vw", ease: Power2.easeInOut }
+      ).fromTo(
+        container,
+        1,
+        { width: "100vw" },
+        { width: "80vw", ease: Power2.easeInOut }
+      )
+      .fromTo(wrapper,1.2,{x:'-100%'},{x:'0%',ease:Power2.easeInOut},"-=1.2")
+      .fromTo(
+        container,
+        1,
+        { boxShadow: "0px 0px 0px 0px rgba(11,5,62,1)" },
+        { boxShadow: "0px 0px 30px 20px rgba(11,5,62,1)", ease: Power2.easeIn }
+      )
+      .fromTo(
+        container,
+        .1,
+        { backgroundColor: '#0a1042' },
+        { backgroundColor: 'black', ease: Power2.easeIn }
+      )
     </script>
+    <srcipt src="app.js"></srcipt>
   </body>
 </html>
