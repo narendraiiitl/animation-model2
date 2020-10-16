@@ -3,11 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Axios-IIITL</title>
     <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="wing.css" />
+    <link rel="stylesheet" href="webwing.css" />
   </head>
   <body>
+    <div class="wing-buttons">
+      <span class="back-btn">Back</span>
+      <span class="webd-btn">Web Development</span>
+      <span class="appd-btn">App Development</span>
+      <span class="ml-btn">Machine Learning</span>
+      <span class="cybersec-btn">Cyber Security</span>
+      <span class="cc-btn">Comptative Coding</span>
+      <span class="design-btn">Design Wing</span>
+    </div>
     <div class="wrapperouter"></div>
+    <div class="yellow"></div>
+    <div class="ml">
+      <div class="back"></div>
+
+      <div class="webcontainer">
+        <div class="header-text">
+          <h2>Web Development</h2>
+
+          <p>
+            Successful website does three things - it attracts the right kinds
+            of visitors, guides them to the main services or product you offer
+            and collect contact details for future ongoing relation.
+          </p>
+
+          <button class="btn">See More </button>
+        </div>
+      </div>
+    </div>
     <div class="wrapper">
       <div class="hero">
         <div class="container" data-tilt>
@@ -38,7 +67,7 @@
               </div>
               <div class="cta">
                 <button id="explore">EXPLORE</button>
-                <button id="exploreback">COVER</button>
+                <button id="exploreback">ABOUT US</button>
               </div>
             </div>
           </div>
@@ -51,92 +80,12 @@
         </div>
       </div>
     </div>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.0.3/tilt.jquery.min.js"></script>
     <script src="anime.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/timelinejs/3.6.6/js/timeline-min.js"></script>
-    <script>
-      const btn = document.getElementById("explore");
-      const btn2 = document.getElementById("exploreback");
-      let rate = 2000;
-      let lastClick = Date.now() - rate;
-      btn.addEventListener("click", () => {
-        if (Date.now() - lastClick >= rate) {
-          var morphing = anime({
-            targets: ".polymorph",
-            points: [
-              {
-                value: "0 0 383 0 579 749 1920 1080 1001 1080 0 1080 0 0",
-              },
-              {
-                value: "0 0 0 0 579 750 1920 1080 1001 1080 0 1080 0 0",
-              },
-              {
-                value: "0 0 0 0 0 1080 1920 1080 1001 1080 0 1080 0 0",
-              },
-            ],
-            easing: "easeInOutExpo",
-            duration: 1500,
-            loop: false,
-          });
-          lastClick = Date.now();
-          morphing.finished.then(() => {
-            btn2.onclick = function () {
-              if (Date.now() - lastClick >= rate) {
-                anime({
-                  targets: ".polymorph",
-                  points: [
-                    {
-                      value: "0 0 0 0 579 750 1920 1080 1001 1080 0 1080 0 0",
-                    },
-                    {
-                      value: "0 0 383 0 579 749 1920 1080 1001 1080 0 1080 0 0",
-                    },
-                    {
-                      value: "0 0 960 0 1920 0 1920 1080 1001 1080 0 1080 0 0",
-                    },
-                  ],
-                  easing: "easeInOutExpo",
-                  duration: 1500,
-                  loop: false,
-                });
-                lastClick = Date.now();
-              }
-            };
-          });
-        }
-      });
-
-      const container = document.querySelector(".container");
-      const tl = new TimelineMax();
-      const wrapper = document.querySelector(".wrapperouter");
-      tl.fromTo(
-        container,
-        1,
-        { height: "0vw" },
-        { height: "45vw", ease: Power2.easeInOut }
-      ).fromTo(
-        container,
-        1,
-        { width: "100vw" },
-        { width: "80vw", ease: Power2.easeInOut }
-      )
-      .fromTo(wrapper,1.2,{x:'-100%'},{x:'0%',ease:Power2.easeInOut},"-=1.2")
-      .fromTo(
-        container,
-        .5,
-        { boxShadow: "0px 0px 0px 0px rgba(11,5,62,1)" },
-        { boxShadow: "0px 0px 30px 20px rgba(11,5,62,1)", ease: Power2.easeOut }
-      )
-      .fromTo(
-        container,
-        .1,
-        { backgroundColor: '#0a1042' },
-        { backgroundColor: 'black', ease: Power2.easeIn }
-      )
-    </script>
-    <srcipt src="app.js"></srcipt>
+    <script src="morph.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>
