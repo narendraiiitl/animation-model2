@@ -29,7 +29,7 @@ tl.fromTo(
         container,
         .1,
         { backgroundColor: '#0a1042' },
-        { backgroundColor: 'black', ease: Power2.easeIn }
+        { backgroundColor: '#d1d5d9', ease: Power2.easeIn }
     )
 const exploreBtn = document.getElementById("explore");
 exploreBtn.addEventListener('click', () => {
@@ -69,7 +69,6 @@ exploreBtn.addEventListener('click', () => {
 })
 
 backButton.addEventListener('click', () => {
-    console.log("clicked")
     tl
         .fromTo(
             wingButtons,

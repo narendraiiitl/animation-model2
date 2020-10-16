@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
 
-
+a{
+    color: inherit;
+    text-decoration: none;
+}
 .yellow,.ml{
     position: absolute;
     width: 100vw;
@@ -38,7 +41,7 @@
     z-index: 7;
     font-weight: 550;
     left: 50%;
-    
+    cursor: pointer;
     border-bottom:3px solid  rgb(194, 150, 5);
     transform: translateX(-50%);
 }
@@ -50,6 +53,7 @@
     z-index: 7;
     font-weight: 550;
     left:0;
+    cursor: pointer;
     border-bottom:3px solid  rgb(194, 150, 5);
     transform-origin:0 0;
     transform:rotateZ(-90deg) translateX(-50%); 
@@ -62,6 +66,7 @@
     z-index: 7;
     font-weight: 550;
     right:0;
+    cursor: pointer;
     border-bottom:3px solid  rgb(194, 150, 5);
     transform-origin:50% 50%;
     transform:rotateZ(90deg) translate(-15%,-100%); 
@@ -73,6 +78,7 @@
     z-index: 7;
     font-weight: 550;
     left:0;
+    cursor: pointer;
     margin:0 1rem;
     border-bottom:3px solid  rgb(194, 150, 5);
     transform: translateY(-35%);
@@ -84,6 +90,7 @@
     z-index: 7;
     font-weight: 550;
     right:0;
+    cursor: pointer;
     margin:0 1rem;
     border-bottom:3px solid  rgb(194, 150, 5);
     transform: translateY(-35%);
@@ -93,6 +100,7 @@
     bottom:0%;
     padding: .7rem 0;
     z-index: 7;
+    cursor: pointer;
     font-weight: 550;
     left:50%;
     transform: translate(-50%,-35%);
