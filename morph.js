@@ -10,19 +10,19 @@ let lastClick = Date.now() - rate;
 btn.addEventListener("click", () => {
     if (Date.now() - lastClick >= rate) {
         tl.
-        fromTo(
-            partone,
-            1,
-            { transfrom: "translateX(0%)" },
-            { transform: "translateX(-100%)", ease: Power2.easeInOut }
-        )
-        .fromTo(
-            parttwo,
-            1,
-            { transfrom: "translateX(0%)" },
-            { transform: "translateX(100%)", ease: Power2.easeInOut },
-            "-=1"
-        )
+            fromTo(
+                partone,
+                1,
+                { transfrom: "translateX(0%)" },
+                { transform: "translateX(-100%)", ease: Power2.easeInOut }
+            )
+            .fromTo(
+                parttwo,
+                1,
+                { transfrom: "translateX(0%)" },
+                { transform: "translateX(100%)", ease: Power2.easeInOut },
+                "-=1"
+            )
         var morphing = anime({
             targets: ".polymorph",
             points: [
@@ -37,17 +37,17 @@ btn.addEventListener("click", () => {
                 },
             ],
             easing: "easeInOutExpo",
-            duration: 1200,
+            duration: 1000,
             loop: false,
         });
         lastClick = Date.now();
-      
+
         morphing.finished.then(() => {
             tl.fromTo(
                 container,
-                .5,
-                { width: "80vw",height:"45vw" },
-                { width:"100vw", height:"100vh", ease: Power2.easeInOut },
+                .4,
+                { width: "80vw", height: "45vw" },
+                { width: "100vw", height: "100vh", ease: Power2.easeInOut },
             )
         });
     }
