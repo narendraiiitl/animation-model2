@@ -42,6 +42,7 @@ a{
     justify-content: center;
     background-image:url(webcove.jpg);
     background-size:100% 100%;
+    z-index: 5;
 }
 .wing-buttons{
     position: absolute;

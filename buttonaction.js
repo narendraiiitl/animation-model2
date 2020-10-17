@@ -7,33 +7,40 @@ const designbutton = document.querySelector('.design-btn');
 const downcover = document.querySelector('.down-cover');
 const rightcover = document.querySelector('.right-cover');
 const wingName = document.querySelector('#wing-name');
-const wingQuote = document.querySelector('#wing-quote')
+const wingQuote = document.querySelector('#wing-quote');
+const background = document.querySelector('.ml')
 const webContainer = document.querySelector('.webcontainer')
 
 const details = {
     De: {
         text: "Design is an art. Design can be aesthetics. Design is so simple, that's why its so complicated.",
-        img: 'url(./images/design1.jpg)'
+        img: 'url(./images/design1.jpg)',
+        back: 'url(./images/design1.jpg)',
     },
     We: {
-        text: 'If You Think Math is Hard Try Some Front End.',
-        img:  'url(./images/webd3.jpg)'
+        text: "Web development is not just about creating pretty layouts. It’s about understanding the marketing challenge behind your business.”",
+        img:  'url(./images/webd3.jpg)',
+        back:'url(./images/webd3.jpg)',
     },
     Ap: {
         text: 'It’s hard enough to find an error in your code when you’re looking for it; its even harder when you’ve assumed that your code is ERROR-FREE.',
-        img:  'url(./images/appd2.jpg)'
+        img:  'url(./images/appd2.jpg)',
+        back:'url(./images/appd2.jpg)',
     },
     Ma: {
         text: 'A baby learns to crawl, walk and then run. We are in the crawling stage when it comes to applying machine learning.',
-        img:  'url(./images/machinebackground.jpeg)'
+        img:  'url(./images/machinebackground.jpeg)',
+        back:'url(./images/machinebackground.jpeg)',
     },
     Co: {
         text: 'A computer is a stupid machine with the ability to do incredibly smart things, while computer programmers are smart people with the ability to do incredibly stupid things. They are, in short, a perfect match.',
-        img: 'url(./images/ccbackground.jpg)'
+        img: 'url(./images/ccbackground.jpg)',
+        back:'url(./images/ccbackground.jpg)',
     },
     Cy: {
-        text: 'Prevention is better than cure.',
-        img:  'url(./images/cyberbackground.jpg)'
+        text: "Security used to be an inconvenience sometimes, but now it's a necessity all the time.",
+        img:  'url(./images/cyberbackground.jpg)',
+        back:'url(./images/cyback.jpg)',
     },
 }
 // const tl = new TimelineMax();
@@ -76,7 +83,8 @@ function bottomcoveranimation(action) {
         wingName.innerText = action.innerText;
         wingQuote.innerText = details[wingg].text;
         webContainer.style.background = details[wingg].img
-        webContainer.style.backgroundSize = "cover"
+        webContainer.style.backgroundSize = "cover";
+        background.style.backgroundImage = details[wingg].back;
     }, 1000)
 
 
@@ -101,6 +109,7 @@ function rightcoveranimation(action) {
         wingQuote.innerText = details[wingg].text;
         webContainer.style.background = details[wingg].img
         webContainer.style.backgroundSize = "cover"
+        background.style.backgroundImage = details[wingg].back;
     }, 1000)
 }
 function topcoveranimation(action) {
@@ -124,6 +133,7 @@ function topcoveranimation(action) {
         wingQuote.innerText = details[wingg].text;
         webContainer.style.background = details[wingg].img
         webContainer.style.backgroundSize = "cover"
+        background.style.backgroundImage = details[wingg].back;
     }, 1000)
 }
 
@@ -147,5 +157,6 @@ function leftcoveranimation(action) {
         wingQuote.innerText = details[wingg].text;
         webContainer.style.background = details[wingg].img
         webContainer.style.backgroundSize = "cover"
+        background.style.backgroundImage = details[wingg].back;
     }, 1000)
 }
