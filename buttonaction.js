@@ -40,7 +40,7 @@ const details = {
     Cy: {
         text: "Security used to be an inconvenience sometimes, but now it's a necessity all the time.",
         img:  'url(./images/cyberbackground.jpg)',
-        back:'url(./images/cyback.jpg)',
+        back:'url(./images/cyback.png)',
     },
 }
 // const tl = new TimelineMax();
