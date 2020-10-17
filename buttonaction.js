@@ -30,7 +30,7 @@ const details = {
     Ma: {
         text: 'A baby learns to crawl, walk and then run. We are in the crawling stage when it comes to applying machine learning.',
         img:  'url(./images/machinebackground.jpeg)',
-        back:'url(./images/machinebackground.jpeg)',
+        back:'url(./images/mlback.png)',
     },
     Co: {
         text: 'A computer is a stupid machine with the ability to do incredibly smart things, while computer programmers are smart people with the ability to do incredibly stupid things. They are, in short, a perfect match.',
